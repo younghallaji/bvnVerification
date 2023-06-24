@@ -13,7 +13,7 @@ class VerificationService
     {
         try {
             $response = Http::withHeaders([
-                'token' => '9rMSKHwA.7Njtjh6i65S2DMohrKU24v5sanfDcSl46Irp', 
+                'token' => env('API_TOKEN'), 
                 'Content-Type' => 'application/x-www-form-urlencoded',
             ])->asForm()->post('https://api.sandbox.youverify.co/v2/api/identity/ng/bvn', [
                 'id' => $bvn,
