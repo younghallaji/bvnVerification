@@ -54,6 +54,9 @@ npm run dev or yarn dev
 
 php artisan serve
 
+Once the development server is running, you can access the Laravel project by visiting the URL displayed by the php artisan serve command.
+-
+
 
 
 
