@@ -7,14 +7,13 @@ use Illuminate\Support\Facades\Http;
 class VerificationService
 {
 
-    // nYLAqEMz.T5x8HBgj0tRKda7R0AHlM3BdOgGTtJlQ4tgm    key one
 
 
     public function verifyBVN($bvn)
     {
         try {
             $response = Http::withHeaders([
-                'token' => '9rMSKHwA.7Njtjh6i65S2DMohrKU24v5sanfDcSl46Irp', //'9rMSKHwA.7Njtjh6i65S2DMohrKU24v5sanfDcSl46Irp',
+                'token' => '9rMSKHwA.7Njtjh6i65S2DMohrKU24v5sanfDcSl46Irp', 
                 'Content-Type' => 'application/x-www-form-urlencoded',
             ])->asForm()->post('https://api.sandbox.youverify.co/v2/api/identity/ng/bvn', [
                 'id' => $bvn,

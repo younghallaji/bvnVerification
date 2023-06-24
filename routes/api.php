@@ -15,6 +15,4 @@ use App\Http\Controllers\Api\YouVerifyController;
 |
 */
 Route::post('/verify', [YouVerifyController::class, 'verify'])->name('verify');
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+

@@ -38,6 +38,10 @@ class UsersController extends Controller
             return redirect('/')->with('success', 'Registration successful!');
     }
 
+    public function home(){
+        return view('index');
+    }
+
     public function index(){
         return view('register');
     }

@@ -16,14 +16,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', [UsersController::class, 'home']);
 Route::get('/register', [UsersController::class, 'index'])->name('add-user');
 Route::post('/login', [AuthController::class, 'userLogin'])->name('login');
-Route::get('/login', function () {
-    return view('index');
-});
+Route::get('/login', [UsersController::class, 'home']);
 Route::post('/verify', [YouVerifyController::class, 'verify'])->name('verify')->middleware('auth');
 Route::get('/dashboard', [YouVerifyController::class, 'index'])->middleware('auth');
 Route::post('/register', [UsersController::class, 'userRegistration'])->name('register');
